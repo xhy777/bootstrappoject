@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+		<script src="js/jquery-3.7.0.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="css/wcmsIndex.css"/>
+		<script src="js/jquery1.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/bootstrap-wysiwyg.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.hotkeys.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="css/wcmsIndex.css" />
+		<style type="text/css">
+			.scrollNotice{position: relative;height: 40px;overflow: hidden;background: #FFFFFF;
+			border: 1px solid red;border-radius: 5px;padding: 5px;padding-left: 90px;}
+			.scrollNotice ul,.scrollNotice li{margin: 0;padding: 0;list-style-type: none;line-height: 30px;}
+			.scrollNotice ul li a{text-decoration: none;font: bold 15px "microsoft yahei";color: #555555;}
+			.scrollNotice #noticeTip{position: absolute;left: 0;top: 0;height: 40px;color: #FFFFFF;font: bold 15px "microsoft yahei";
+			background: red;padding: 10px;}
+			#hotNews .badgetop3{background: red;}
+			#ulPEPlatform .list-group-item{padding: 28px 10px;}
+			#ulPEPlatform .divPicText{position: absolute;bottom: 0px;left: 0;height: 0;overflow: hidden;background: #000000;
+			opacity: 0.7;color: #FFFFFF;font: 14px/25px"microsoft yahei";}
+			#artContent p{text-indent: 2em;font: normal 15px/35px"microsoft yahei";}
+			#artContent p{text-align: justify;text-justify: distribute-all-lines;-moz-text-align-last: justify;
+			-webkit-text-align-last:justify;}
+			.comment{margin: 10px;padding: 12px;}
+			.comment .media{border-bottom:1px red dotted;}
+			.comment img{padding: 3px;}
+			.comment .media_last{margin-top: 15px;border-bottom: none;}
+			.comment .media_last pull-left{padding-right: 10px;}
+			.comment .media .media-body .media{padding: 10px;border-top:1px red dotted ;border-bottom: none;}
+		    #divFooter{color:white;margin-top: 20px;background-color:#FF8080;}
+		    #divFooter .row div{color: #cccacc;font: 15px/30px"microsoft yahei";}
+		     #divFooter .row a{color: black;}
+		      #divFooter .row ul{margin: 0;padding: 0;list-style: none;}
+		     #divFooter .rowLinkLogo{padding: 30px 0;border-bottom: 1px solid #FF8080;}
+		    #rowLinkLogo .leftLink{text-align: right;border-right: 1px solid #454a51;}
+		    #rowLinkLogo centerLogo{text-align: center;font-size:16px ;font-weight: bold;}
+		    #rowLinkLogo .rightLink{text-align: left;border-left: 1px solid #454A51;}
+		    .divCopyright{background-color: darkred;border-top:1px solid #3e4248 ;padding: 20px 0px;text-align: center;}
+		    .divCopyright{color: #CCCACC;font-weight: bold;}.colortxt{
+    font-size: 30px;
+    background: linear-gradient(to right, red, blue);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+		    <style>
+
+</style>
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top nvabar-inverse" role="navigation">
+			<div class="container">
+				<ul class="nav navbar-nav navbar-left">
+					<li>
+						<a href="#"><span class="glyphicon glyphicon-home"></span>
+							&nbsp;&nbsp;设为首页</a>
+					</li>
+					<li>
+						<a href="#"><span class="glyphicon glyphicon-star"></span>
+							&nbsp;&nbsp;收藏本站</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="#" data-toggle="modal" data-target="#userLoginModal">
+							<span class="glyphicon glyphicon-user"></span>
+						    &nbsp;&nbsp;登录</a>
+					</li>
+					<li> 
+					    <a href="#" data-toggle="modal" data-target="#userRegisterModal">
+							<span class="glyphicon glyphicon-edit"></span>
+						    &nbsp;&nbsp;注册</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<a href="#" data-toggle="modal" data-target="#userLoginModal">
+			<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;登录
+		</a>
+		<div class="modal fade" id="userLoginModal" role="dialog">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<form id="frmUserLogin" class="form-horizontal">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+								&times;</button>
+								<h4 class="modal-title"><span class="glyphicon glyphicon-user"></span>
+									&nbsp;&nbsp;用户登录
+								</h4>
+						</div>
+						<div class="modal-body">
+							<p><input type="text" class="form-control" placeholder="用户名/手机号/邮箱账号"/></p>
+						    <p><input type="password" class="form-control" placeholder="密码" /></p>
+						    <p><label class="checkbox-inline">
+						    	<input type="checkbox" />十天内免登录
+						    </label></p>
+						</div>
+						<div class="modal-footer">
+							<input type="button" class="btn btn-success" value="登&nbsp录" />
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row" style="margin-top: 50px;">
+				<div class="col-sm-5 col-xs-12">
+					<img  src="img/164S31a8-5.png" alt="中国剪纸艺术" class="img-responsive" style="display: inline-block;margin-bottom: 35px;"/>
+					<div style="display: inline-block; margin-top: 5px;margin-left: 15px;"><br />
+						<p style="display: inline-block;" class="colortxt">中国剪纸艺术</p><br />
+					<p style="font-size: 5px; display: inline-block;margin: 0px;" class="colortxt">Chinese paper cuntting art</p>
+					</div></div>
+				<div class="col-sm-7 col-xs-12" style="padding: 2.5% 0;>
+					<form id="frmSeach" action="#">
+						<div class="input-group">
+							<input type="text"class="form-control" placeholder="请输入关键字" />
+							<span class="input-group-btn">
+								<input type="submit" class="btn btn-default" value="搜索"/>
+							</span>
+						</div>
+					</form>
+					
+				</div>
+			</div>
+		</div>
+		<div class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="nvabar-header">
+					<a class="navbar-brand" href="#">中国剪纸</a>
+				</div>
+				<div class="collapse navbar-collapse" id="nvabar-main">
+					<ul class="nav navbar-nav">
+						<li><a href="default1.html">首页</a></li>
+					    <li><a href="newChannnel.html">新闻动态</a></li>
+					    <li><a href="index.html">新闻资讯</a></li>
+					</ul>
+					
+				</div>
+			</div>
+		</div>
+			
+		<div class="row">
+			<div class="col-xs-12 col-sm-4">
+				<div class="panel panel-danger">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						<a href="https://www.yebaike.com/22/2999738.html" style="float: right;">更多..</a>
+						<span class="glyphicon glyphicon-volume-up"></span>
+						&nbsp;&nbsp;剪纸种类
+					</h3>
+				</div>
+				</div>
+				<ul class="list-group">
+				<li class="list-group-item">
+					<a href="https://www.yebaike.com/22/2999738.html" target="_blank">墙花：布置房间时贴在墙上</a>
+				</li>
+				<li class="list-group-item">
+					<a href="https://www.yebaike.com/22/2999738.html" target="_blank">窗花：在春节和元宵节时贴挂的剪纸</a>
+				</li>
+				<li class="list-group-item">
+					<a href="https://www.yebaike.com/22/2999738.html" target="_blank">喜花：在结婚布置新房时剪贴在室内、家具和器物上</a>
+				</li>
+				<li class="list-group-item">
+					<a href="https://www.yebaike.com/22/2999738.html" target="_blank">寿花：在过生日时贴的</a>
+				</li>
+				
+			</ul>
+			</div>
+			<!--第二块-->
+			
+			
+			<div class="col-xs-12 col-sm-5">
+				<div id="carousel-news" class="carousel slide" data-ride="carousel">
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+				<img alt="" src="img/c226334bf8ef6890-01d5384aa7434ef8-ec227d401c9a930c41543955fbd4e95d.jpg" />
+				<div class="carousel-caption" contenteditable="true">
+					<h4>马到功成</h4>
+					<p>马在中华民族的文化中地位极高，有一系列的象征和寓意。中华民族有“龙马精神”，代表自古以来崇尚的奋斗不止、积极进取、自强不息的民族精神</p>
+				</div>
+			</div>
+			<div class="item">
+				<img alt="" src="img/b37d57d0bbfab194-9429aa682b55e7aa-94dfb7dce3bea5dad6a8521e6119dd42.jpg"/>
+				<div class="carousel-caption" contenteditable="true">
+					<h4>喜气洋洋</h4>
+					<p>窗花的意义是以其特有的概括和夸张手法将吉事祥物、美好愿望表现得淋漓尽致，将节日装点得红火富丽、喜气洋洋。窗花的民俗作用最为集中，不仅美化生活环境，而且寄托着对生活理想的追求与渴望。祈祝生活富裕、后代昌隆、人寿年丰</p>
+				</div>
+			</div>
+			<div class="item">
+				<img alt="" src="img/QQ图片20230611110401.jpg"/>
+				<div class="carousel-caption" contenteditable="true">
+					<h4>精神图腾</h4>
+					<p>龙作为中华民族的精神图腾从古至今就受到人们最高的崇拜和尊敬，因此也常常会在包括剪纸制作等各种的民间手工制作中看到龙的形象。</p>
+				</div>
+			</div>
+					</div>
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-news" data-slide-to="0" class="active"></li>
+				        <li data-target="#carousel-news" data-slide-to="1"></li>
+				        <li data-target="#carousel-news" data-slide-to="2"></li>
+					</ol>
+					<a class="left carousel-control" href="carousel-news" role="botton" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+				        <span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="carousel-news" role="botton" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+				        <span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+			
+			<!--第三块-->
+			<div class="col-xs-12 col-sm-3">
+				<div class="panel panel-danger">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;用户登录
+					</h3>
+		
+		</div>
+		
+		<div class="panel-body">
+			<form class="form-horizontal" role="form">
+				<p>
+					<input type="text" class="form-control" placeholder="用户名" />
+				</p>
+				<p>
+					<input type="text" class="form-control" placeholder="密码" />
+				</p>
+				<p>
+					<label class="checkbox-inline">
+						<input type="checkbox" />十天内免登陆
+					</label>
+				</p>
+				<p>
+					<input type="button" class="btn btn-success" value="登&nbsp;录" />
+					<input type="button" class="btn btn-default" value="注&nbsp;册" data-toggle="modal" data-target="#userRegisterModal" />
+				</p>
+			</form>
+		</div>
+		</div>
+		</div>
+		
+		
+		<!--第四块-->
+		<div class="row">
+			<div class="col-xs-12 col-sm-4">
+				<div class="panel panel-danger">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						<a href="https://www.51dongshi.com/esgedfssaebbs.html" style="float: right;">更多..</a>
+						<span class="glyphicon glyphicon-volume-up"></span>
+						&nbsp;&nbsp;剪纸历史
+					</h3>
+				</div>
+				</div>
+				<ul class="list-group">
+				<li class="list-group-item">
+					<a href="https://www.51dongshi.com/esgedfssaebbs.html" target="_blank">西汉产生：以雕、剔、刻、剪的技法在金箔、丝绸、皮革上剪刻纹样</a>
+				</li>
+				<li class="list-group-item">
+					<a href="https://www.51dongshi.com/esgedfssaebbs.html" target="_blank">南北朝发展：最早的剪纸发现于南北朝时期的新疆</a>
+				</li>
+				<li class="list-group-item">
+					<a href="https://www.51dongshi.com/esgedfssaebbs.html" target="_blank">唐朝大发展：剪纸风俗流传在民间</a>
+				</li>
+				<li class="list-group-item">
+					<a href="https://www.51dongshi.com/esgedfssaebbs.html" target="_blank">宋朝巅峰：已经作为一种经济产物</a>
+				</li>
+				<li class="list-group-item">
+					<a href="https://www.51dongshi.com/esgedfssaebbs.html" target="_blank">元明清成熟：各个种类的剪纸都已经走向完美的趋势</a>
+				</li>
+			</ul>
+			</div>
+			
+			
+			
+			<!--第五块-->
+			<div class="col-xs-12 col-sm-5">
+				<video src="img/DA2B45CB7A717C87243F82DE773DF30A.mp4" controls="controls" width="600" height="300"></video>
+			</div>
+			
+			
+			
+			<!--第六块-->
+			<div class="col-xs-12 col-sm-3">
+				<div class="panel-danger">
+					<ul class="nav nav-tabs" id="tab_ul">
+						<li class="active">
+						<a href="#zsxx" id="zsxx_a" data-toggle="tab">
+							<span class="glyphicon glyphicon-bullhorn">&nbsp;单色剪纸</span>
+						</a>
+						</li>
+					<li>
+						<a href="#jyxx" id="jyxx_a" data-toggle="tab">
+							<span class="glyphicon glyphicon-bullhorn">&nbsp;彩色剪纸</span>
+						</a>
+					</li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane fade in active" id="#zsxx">
+							<a class="list-group-item" href="https://baike.baidu.com/item/%E6%8A%98%E5%8F%A0%E5%89%AA%E7%BA%B8?fromModule=lemma_inlink">折叠剪纸</a>
+						    <a class="list-group-item" href="https://baike.baidu.com/item/%E5%89%AA%E5%BD%B1/82229?fromModule=lemma_inlink">剪影</a>
+						    <a class="list-group-item" href="https://baike.baidu.com/item/%E6%92%95%E7%BA%B8?fromModule=lemma_inlink">撕纸</a>
+						</div>
+						<div class="tab-pane fade" id="#jyxx">
+							<div class="tab-pane fade in active">
+								<a class="list-group-item" href="#">点染剪纸</a>
+						        <a class="list-group-item" href="#">套色剪纸</a>
+						        <a class="list-group-item" href="#">分色剪纸</a>
+							</div>
+						</div>
+					</div>
+						
+				</div>
+		</div>
+		<div class="row">
+			
+			
+			
+			<!--第七块-->
+			<div class="col-xs-12 col-sm-9">
+			<div class="panel panel-danger">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						<a href="https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E5%89%AA%E7%BA%B8/397259" style="float: right;">更多...</a>
+						<span class="glyphicon glyphicon-picture"></span>&nbsp;&nbsp;剪纸文化
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="media">
+					<a class="pull-left" href="#">
+						<img src="img/164S31a8-5.png" class="media-object img-thumbnail img-response" alt="..." />
+					</a>
+					<div class="media-body">
+						<h4 class="media-heading">
+							<a href="https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E5%89%AA%E7%BA%B8/397259">艺术中的剪纸</a>
+						</h4>
+						<p>在中国南北方的剪纸艺术，通过一把剪刀，一张纸，就可以表达生活中的各种喜怒哀乐</p>
+						<p>剪纸，作为一种原始艺术的载体，它在造型上总是运用夸张变形的手法，它善于将不同空间、时间的物象进行组合，通过一种夸张和变形的手法来改变对象的性质、形式，进而改变自然原形的惯常标准。</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			<!--第八块-->
+			<div class="col-xs-12 col-sm-3">
+				<div class="panel panel-danger" id="divChannelLink">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							<span class="glyphicon glyphicon-hand-right"></span>
+							&nbsp;&nbsp;快捷通道
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+								<a href="https://zhuanlan.zhihu.com/p/398563465"><img src="img/164S31a8-5.png" class="img-responsive img-thumbnail"</a>
+								<p>民俗生肖</p>
+							</div>
+							<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+								<a href="https://zhuanlan.zhihu.com/p/398563465"><img src="img/164S31a8-5.png" class="img-responsive img-thumbnail"</a>
+								<p>爱国爱家</p>
+							</div>
+							<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+								<a href="https://zhuanlan.zhihu.com/p/398563465"><img src="img/164S31a8-5.png" class="img-responsive img-thumbnail"</a>
+								<p>写意人生</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+								<a href="https://zhuanlan.zhihu.com/p/398563465"><img src="img/164S31a8-5.png" class="img-responsive img-thumbnail"</a>
+								<p>传承手艺</p>
+							</div>
+							<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+								<a href="https://zhuanlan.zhihu.com/p/398563465"><img src="img/164S31a8-5.png" class="img-responsive img-thumbnail"</a>
+								<p>走进民族</p>
+							</div>
+							<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+								<a href="https://zhuanlan.zhihu.com/p/398563465"><img src="img/164S31a8-5.png" class="img-responsive img-thumbnail"</a>
+								<p>放飞梦想</p>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		
+		
+		<footer id="divFooter">
+			<div class="container">
+				<div class="row rowLinkLogo">
+					<div class="col-md-3 col-xs-4 col-sm-3 col-lg-3 leftLink">
+						<ul>
+							<li><a href="https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E5%89%AA%E7%BA%B8/397259">剪纸概况</a></li>
+							<li><a href="https://www.bilibili.com/video/BV1wN41197jd/">剪纸教学</a></li>
+							<li><a href="https://www.ihchina.cn/jianzhi_tuji.html">剪纸资源</a></li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-xs-4 col-sm-6 col-lg-6 centerLogo">
+						<center>
+							<img class="img-responsive" src="img/s5bf3825b320ab.png" />
+						</center>
+						<p>0741-4499498|0741-56549851
+						<br /><a href="#">1966273105@qq.com</a>
+						</p>
+					</div>
+					<div class="col-md-3 col-xs-4 col-sm-3 col-lg-3 rightLink">
+						<ul>
+							<li><a href="https://www.ihchina.cn/jigou">非遗机构</a></li>
+							<li><a href="https://www.ihchina.cn/zhengce">剪纸政策</a></li>
+							<li><a href="https://www.ihchina.cn/xueshu">剪纸学术</a></li>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+			<div class="divCopyright">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+							<center>地址：成都市郫都区学院街45号|版权所有：袁神大队</center>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

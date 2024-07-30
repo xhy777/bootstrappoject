@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+		<script src="js/jquery-3.7.0.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="css/wcmsIndex.css"/>
+		<script src="js/jquery1.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/bootstrap-wysiwyg.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.hotkeys.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="css/wcmsIndex.css" />
+		<style type="text/css">
+			.scrollNotice{position: relative;height: 40px;overflow: hidden;background: #FFFFFF;
+			border: 1px solid red;border-radius: 5px;padding: 5px;padding-left: 90px;}
+			.scrollNotice ul,.scrollNotice li{margin: 0;padding: 0;list-style-type: none;line-height: 30px;}
+			.scrollNotice ul li a{text-decoration: none;font: bold 15px "microsoft yahei";color: #555555;}
+			.scrollNotice #noticeTip{position: absolute;left: 0;top: 0;height: 40px;color: #FFFFFF;font: bold 15px "microsoft yahei";
+			background: red;padding: 10px;}
+			#hotNews .badgetop3{background: red;}
+			#ulPEPlatform .list-group-item{padding: 28px 10px;}
+			#ulPEPlatform .divPicText{position: absolute;bottom: 0px;left: 0;height: 0;overflow: hidden;background: #000000;
+			opacity: 0.7;color: #FFFFFF;font: 14px/25px"microsoft yahei";}
+			#artContent p{text-indent: 2em;font: normal 15px/35px"microsoft yahei";}
+			#artContent p{text-align: justify;text-justify: distribute-all-lines;-moz-text-align-last: justify;
+			-webkit-text-align-last:justify;}
+			.comment{margin: 10px;padding: 12px;}
+			.comment .media{border-bottom:1px red dotted;}
+			.comment img{padding: 3px;}
+			.comment .media_last{margin-top: 15px;border-bottom: none;}
+			.comment .media_last pull-left{padding-right: 10px;}
+			.comment .media .media-body .media{padding: 10px;border-top:1px red dotted ;border-bottom: none;}
+		    #divFooter{color:white;margin-top: 20px;background-color:#FF8080;}
+		    #divFooter .row div{color: #cccacc;font: 15px/30px"microsoft yahei";}
+		     #divFooter .row a{color: black;}
+		      #divFooter .row ul{margin: 0;padding: 0;list-style: none;}
+		     #divFooter .rowLinkLogo{padding: 30px 0;border-bottom: 1px solid #FF8080;}
+		    #rowLinkLogo .leftLink{text-align: right;border-right: 1px solid #454a51;}
+		    #rowLinkLogo centerLogo{text-align: center;font-size:16px ;font-weight: bold;}
+		    #rowLinkLogo .rightLink{text-align: left;border-left: 1px solid #454A51;}
+		    .divCopyright{background-color: darkred;border-top:1px solid #3e4248 ;padding: 20px 0px;text-align: center;}
+		    .divCopyright{color: #CCCACC;font-weight: bold;}.colortxt{
+    font-size: 30px;
+    background: linear-gradient(to right, red, blue);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+		    <style>
+
+</style>
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top nvabar-inverse" role="navigation">
+			<div class="container">
+				<ul class="nav navbar-nav navbar-left">
+					<li>
+						<a href="#"><span class="glyphicon glyphicon-home"></span>
+							&nbsp;&nbsp;设为首页</a>
+					</li>
+					<li>
+						<a href="#"><span class="glyphicon glyphicon-star"></span>
+							&nbsp;&nbsp;收藏本站</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="#" data-toggle="modal" data-target="#userLoginModal">
+							<span class="glyphicon glyphicon-user"></span>
+						    &nbsp;&nbsp;登录</a>
+					</li>
+					<li> 
+					    <a href="#" data-toggle="modal" data-target="#userRegisterModal">
+							<span class="glyphicon glyphicon-edit"></span>
+						    &nbsp;&nbsp;注册</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<a href="#" data-toggle="modal" data-target="#userLoginModal">
+			<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;登录
+		</a>
+		<div class="modal fade" id="userLoginModal" role="dialog">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<form id="frmUserLogin" class="form-horizontal">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+								&times;</button>
+								<h4 class="modal-title"><span class="glyphicon glyphicon-user"></span>
+									&nbsp;&nbsp;用户登录
+								</h4>
+						</div>
+						<div class="modal-body">
+							<p><input type="text" class="form-control" placeholder="用户名/手机号/邮箱账号"/></p>
+						    <p><input type="password" class="form-control" placeholder="密码" /></p>
+						    <p><label class="checkbox-inline">
+						    	<input type="checkbox" />十天内免登录
+						    </label></p>
+						</div>
+						<div class="modal-footer">
+							<input type="button" class="btn btn-success" value="登&nbsp录" />
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row" style="margin-top: 50px;">
+				<div class="col-sm-5 col-xs-12">
+					<img  src="img/164S31a8-5.png" alt="中国剪纸艺术" class="img-responsive" style="display: inline-block;margin-bottom: 35px;"/>
+					<div style="display: inline-block; margin-top: 5px;margin-left: 15px;"><br />
+						<p style="display: inline-block;" class="colortxt">中国剪纸艺术</p><br />
+					<p style="font-size: 5px; display: inline-block;margin: 0px;" class="colortxt">Chinese paper cuntting art</p>
+					</div></div>
+				<div class="col-sm-7 col-xs-12" style="padding: 2.5% 0;>
+					<form id="frmSeach" action="#">
+						<div class="input-group">
+							<input type="text"class="form-control" placeholder="请输入关键字" />
+							<span class="input-group-btn">
+								<input type="submit" class="btn btn-default" value="搜索"/>
+							</span>
+						</div>
+					</form>
+					
+				</div>
+			</div>
+		</div>
+		<div class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="nvabar-header">
+					<a class="navbar-brand" href="#">中国剪纸</a>
+				</div>
+				<div class="collapse navbar-collapse" id="nvabar-main">
+					<ul class="nav navbar-nav">
+						<li><a href="default1.html">首页</a></li>
+					    <li><a href="newChannnel.html">新闻动态</a></li>
+					    <li><a href="index.html">新闻资讯</a></li>
+					</ul>
+					
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="container">
+		<!--滚动通知公告、图片新闻、分页开始-------------------->
+		<div class="col-md-9 col-xs-12 col-sm-9 col-lg-9">
+			<!--滚动通知公告开始-------------------->
+			<div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+				<div class="scrollNotice">
+					<div id="noticeTip">公告栏：</div>
+					<ul>
+						<li>
+							<a href="http://www.chinapapercut.cn/news/n1/1016.html">
+								<span class="glyphicon glyphicon-volume-up"></span> &nbsp;360°全景剪纸云展览
+							</a>
+						</li>
+						<li>
+							<a href="http://www.chinapapercut.cn/news/n1/1169.html">
+								<span class="glyphicon glyphicon-volume-up"></span> &nbsp;“深蓝大海·红色记忆”-第二届全国海洋文化剪纸精品展
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+			<div class="row">
+					<div class="col-md-12 col-xs-12 col-sm-12 col-lg-12" >
+						<div class="col-md-9 col-xs-12 col-sm-9 col-lg-9">
+			<div class="panel panel-danger">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						<span class="glyphicon glyphicon-hand-right"></span>
+						&nbsp;&nbsp;当前位置:>新闻咨询
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="media">
+					<a class="pull-left" href="https://baijiahao.baidu.com/s?id=1761135597856835615&wfr=spider&for=pc">
+						<img src="img/one.webp"  class="imgone"/>
+					</a>.
+					<div class="media-body" >
+						<h4 class="media-heading">
+							<a href="https://baijiahao.baidu.com/s?id=1761135597856835615&wfr=spider&for=pc">云赏非遗｜纸上生花 “剪”出非遗魅力</a>
+						</h4>
+						<p>央广网内蒙古频道推出《云赏非遗》系列报道，聚焦内蒙古非物质文化遗产，利用融媒体传播优势，助力非物质文化遗产传播、传承。
+					央广网呼和浩特3月23日消息 一把剪刀，一张红纸，寥寥数剪，上下翻飞。赓续民族文脉艺萃，剪出科右前旗古韵今风。非遗千载，栩栩如生、活灵活现的小物不仅展现民间艺术，也是生活记忆。在兴安盟这片多民族生活的广袤土地上，剪纸艺术也与当地人民的生活融合，形成独特的风格。大红剪纸，喜庆热闹，不同的图案，承载牧民们对美好生活的向往，散发浓郁的民俗之美。
+					鲁沙茹拉，兴安盟非物质文化遗产项目科尔沁蒙古族民间剪纸艺术代表性传承人，坚持剪纸已有30余年，通过剪纸艺术的形式，呈现农村牧区的生产生活，形成了独特的剪纸风格。
+				
+				
+						</p>
+					</div>
+				</div>
+				<div class="media">
+				<a class="pull-left" href="https://vod-xhpfm.xinhuaxmt.com/NewsVideo/202207/cac2d3e91c9b4976bb3bc1cc3f3595bf.mp4">
+					<img src="img/two.webp"  class="imgtwo"/>
+				</a>
+				<div class="media-body" >
+					<h4 class="media-heading">
+						<a href="http://www.gx.xinhuanet.com/newscenter/2022-07/24/c_1128858334.htm">大美非遗｜全州剪纸剪出美好生活</a>
+					</h4>
+					<p>　剪纸流传至全州并推广普及至今，已有150多年历史。一幅幅题材丰富多样的全州剪纸，在讲述中国故事的同时，也表达了桂北人民对美好生活的向往。
+					2009年，全州民间剪纸技艺成功入选广西壮族自治区非物质文化遗产名录。
+				
+</p>
+				</div>
+			</div>
+
+			<div class="mediao">
+			<a class="pull-left" href="https://baijiahao.baidu.com/s?id=1755814353628233286&wfr=spider&for=pc">
+					<img src="img/four.png"  class="imgthree"/>
+				</a>
+				<div class="media-body" >
+				<h4 class="media-heading">
+					<a href="https://baijiahao.baidu.com/s?id=1755814353628233286&wfr=spider&for=pc">千城年俗丨剪纸迎新春寄乡情</a>
+				</h4>
+				<p>一张红纸，一双巧手，吉林抚松的民间剪纸技艺人将浓浓乡情与民俗技艺结合，碰撞出不一样的火花。
+
+在新春佳节，用剪纸艺术寄托美好祝福，烘托喜庆年味。</p>
+			</div>
+		</div>
+		</div>
+			<div class="panel-footer">
+				<ul class="pagination">
+				<li><a href="">首页</a></li>
+				<li><a href="">上一页</a></li>
+				<li class="active"> <a href="">1</a></li>
+				<li class="disabled"> <a href="">2</a></li>
+				<li><a href="">3</a></li>
+				<li><a href="">4</a></li>
+				<li><a href="">5</a></li>
+				<li><a href="">下一页</a></li>
+				<li><a href="">尾页</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+				<div class="col-md-3 col-xs-12 col-sm-3 col-lg-3">
+					<div class="row">
+						<div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+							<div class="panel panel-danger" id="hotNews">
+							<div class="panel panel-heading">
+								<h3 class="panel-title">
+									<span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;最新新闻
+								</h3>
+							</div>
+							<ul class="list-group">
+								<a href="https://new.qq.com/rain/a/20230520A077D100" target="_blank" class="list-group-item">
+									<span class="badge pull-left badgetop3">1</span>
+								&nbsp;&nbsp;东盟留学生学中国剪纸</a>
+								<a href="https://www.thepaper.cn/newsDetail_forward_14618946" target="_blank" class="list-group-item">
+									<span class="badge pull-left badgetop3">2</span>
+								&nbsp;&nbsp;非遗国粹｜中国剪纸</a>
+								<a href="http://art.china.cn/txt/2021-10/25/content_41712778.htm" target="_blank" class="list-group-item">
+									<span class="badge pull-left badgetop3">3</span>
+								&nbsp;&nbsp;“大道至剪——张永忠剪纸艺术作品展”</a>
+							</ul>
+						</div>
+						</div>
+					</div>
+					<div class="row">
+					<div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+						<div class="panel panel-danger">
+							<div class="panel-heading">
+								<h3 class="panel-title">
+									<a href="https://www.zhihu.com/question/479963029" class="pull-right">..更多</a>
+									<span class="fa fa-thumbs-o-up"></span>&nbsp;&nbsp;精彩评论
+								</h3>
+							</div>
+							<div class="panel-group" id="accordion">
+								<div class="panel">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+										class="list-group-item">剪纸的历史来源、发展和现状</a>
+										<div id="collapseOne" class="panel-collapse collapse in">
+											<div class="panel-body">
+												<a class="list-group-item" href="https://zhidao.baidu.com/question/941639427932168052.html?mid_exp=1&zsyx=nHcvrHfsPj0YrjRkrHm4rjn1P1Pxn10s&qsign=4mhJ4eJ344JD4mlA4mSz4Gv-4oJf33aK4mSw4UAN4u2n43ls43Jv&expid=1&attach=r%3D0"><span class="fa fa-comment"></span>
+													&nbsp;关于剪纸的由来，其实很早以前就开始了。那时候的人尝试着用一些图形来记事和内容呈现，但那时纸张还并没有出现，人们只能将一些资料记载在青铜器、竹简、兽皮等载体之上。而随着纸张的出现，这些创造性的图案便开始往纸张上转移。通过这样的前后对比，我们就能够看出，剪纸的由来就是来自于先民的图案记录方式。
+												</a>
+												<a class="list-group-item"><span class="fa fa-comment"></span>
+													&nbsp;陕北民族风俗。后来，被人们广泛流传全国各地
+												</a>
+											</div>
+										</div>
+								</div>
+								<div class="panel">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
+										class="list-group-item">新时代中国剪纸</a>
+										<div id="collapseTwo" class="panel-collapse collapse">
+											<div class="panel-body">
+												<a class="list-group-item" href="https://www.zhihu.com/question/479963029/answer/2124918307"><span class="fa fa-comment"></span>
+													&nbsp;导语：当冬奥遇上非遗，会发生什么？还有3天，春节就要来临，冬奥会也即将开幕，在这年关将至，盛会来临的时刻，为了更好的借助冬奥会大力弘扬民族文化，借助传统文化宣传冰雪运动，张家口所在的河北地区拿出了自己的绝活——剪纸艺术。用剪纸来为北京冬奥会加油，来庆祝新春佳节，这一场盛会将是民俗精神、奥运精神、冰雪精神的碰创。
+												</a>
+												<a class="list-group-item"  href="https://www.zhihu.com/question/479963029/answer/2124918307><span class="fa fa-comment"></span>
+													&nbsp;关于这个问题。我在学习剪纸的过程中，常常和师父讨论“希望自己的剪纸更有传统味一些”。之所以这么说，是因为其实现在我们这一代年轻人做的剪纸，其实很多都偏向于写实风格，偏向于现代审美。用我师父的话来说，就是“剪照片”、“像画”（一般来说这个时候我是真的非常沮丧ﾍ(;´Д｀ﾍ)）。我给你举几个我自己的黑历史吧
+												</a>
+											</div>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+						<div class="panel panel-danger">
+							<div class="panel-heading">
+								<h3 class="panel-title">
+									<span class="glyphicon glyphicon-road"></span>剪纸艺术网
+								</h3>
+							</div>
+							<ul class="list-group" id="ulPEPlatform">
+								<li class="list-group-item">
+									<a href="#" target="_blank">
+										<span class="fa fa-mortar-board fa-2x pull-left" style="color: red;"></span> 中国非遗产网 · 中国非物质文化遗产数字博物馆
+									</a>
+									<div class="divPicText">
+										<p>其基本职责为探其源、梳其流、存其果、展其效，就是全面系统地收录收藏全国各级各类非物质文化遗产项目的发源、沿革、理论成果、 工艺流程、传承和社会功效等，以文字、图片和视频等为主要表现形式。</p>
+									</div>
+								</li>
+								<li class="list-group-item">
+									<a href="#" target="_blank">
+										<span class="fa fa-mortar-board fa-2x pull-left" style="color: red;"></span>中华文化促进会剪纸艺术委员会
+									</a>
+									<div class="divPicText">
+										<p>本会的性质：文促会剪纸艺委会宗旨是继承、保护、创新、发展中华剪纸艺术事业和弘扬民族优秀传统文化。 本会成员由从事剪纸艺术的理论研究、创作的专家、艺术家和从事群众文化活动的工作者自愿组成，属非营利性社会组织。</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				</div>
+				
+			</div>
+		</div>
+		<footer id="divFooter">
+			<div class="container">
+				<div class="row rowLinkLogo">
+					<div class="col-md-3 col-xs-4 col-sm-3 col-lg-3 leftLink">
+						<ul>
+							<li><a href="https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E5%89%AA%E7%BA%B8/397259">剪纸概况</a></li>
+							<li><a href="https://www.bilibili.com/video/BV1wN41197jd/">剪纸教学</a></li>
+							<li><a href="https://www.ihchina.cn/jianzhi_tuji.html">剪纸资源</a></li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-xs-4 col-sm-6 col-lg-6 centerLogo">
+						<center>
+							<img class="img-responsive" src="img/s5bf3825b320ab.png" />
+						</center>
+						<p>0741-4499498|0741-56549851
+						<br /><a href="#">1966273105@qq.com</a>
+						</p>
+					</div>
+					<div class="col-md-3 col-xs-4 col-sm-3 col-lg-3 rightLink">
+						<ul>
+							<li><a href="https://www.ihchina.cn/jigou">非遗机构</a></li>
+							<li><a href="https://www.ihchina.cn/zhengce">剪纸政策</a></li>
+							<li><a href="https://www.ihchina.cn/xueshu">剪纸学术</a></li>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+			<div class="divCopyright">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+							<center>地址：成都市郫都区学院街45号|版权所有：袁神大队</center>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
